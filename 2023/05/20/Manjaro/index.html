@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+     
+    <meta charset="UTF-8">
+    <title>Linux-Manjaro KDE 版本 - Steve-L</title>
+    <link rel="shortcut icon" href="/static/img/icon.png">
+    <link rel="icon" href="/static/img/icon.png" sizes="192x192"/>
+    
+<link rel="stylesheet" href="/static/kico.css">
+<link rel="stylesheet" href="/static/hingle.css">
+
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+    <meta property="og:site_name" content="Steve-L">
+    <meta property="og:title" content="Linux-Manjaro KDE 版本"/>
+    
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+  <body>
+    <header>
+    <div class="head-title">
+        <h4>Steve-L</h4>
+    </div>
+    <div class="head-action">
+        <div class="toggle-btn"></div>
+        <div class="light-btn"></div>
+        <div class="search-btn"></div>
+    </div>
+    <form class="head-search" method="post">
+        <input type="text" name="s" placeholder="搜索什么？">
+    </form>
+    <nav class="head-menu">
+        <a href="/">首页</a>
+        <div class="has-child">
+            <a>分类</a>
+            <div class="sub-menu">
+                <a class="category-link" href="/categories/%E5%B7%A5%E5%85%B7/">工具</a>
+            </div>
+        </div>
+        
+    </nav>
+</header>
+
+    <main>
+    <div class="wrap min">
+        <section class="post-title">
+            <h2>Linux-Manjaro KDE 版本</h2>
+            <div class="post-meta">
+                <time class="date">2023.05.20</time>
+            
+            </div>
+        </section>
+        <article class="post-content">
+        
+            <p>总结一下安装Manjaro KDE的过程。不复杂，但是也要小心。</p>
+<h2 id="一、安装系统"><a href="#一、安装系统" class="headerlink" title="一、安装系统"></a>一、安装系统</h2><h3 id="1-下载系统"><a href="#1-下载系统" class="headerlink" title="1.下载系统"></a>1.下载系统</h3><p>官网: <a target="_blank" rel="noopener" href="https://manjaro.org/">Manjaro</a></p>
+<p>点击 Get Manjaro ，选择PLASMA版本，其实就是KDE版本，下载。</p>
+<h3 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2.安装系统"></a>2.安装系统</h3><p>把下载下来的ISO镜像文件，放进U盘启动盘里面，开机启动。如果不熟、担心的，可以先在虚拟机里尝试，上手了再安装。</p>
+<h4 id="2-1操作"><a href="#2-1操作" class="headerlink" title="2.1操作"></a>2.1操作</h4><p>进入到启动界面后，选择lang&#x3D;en_US，把英文改成中文。</p>
+<p>然后点击 Boot with open source drivers (开源驱动) 进入安装。</p>
+<p>进入操作界面后，点击Install图标，</p>
+<p>语言:中文。  地域:亚洲，上海。  键盘:默认。  </p>
+<h4 id="2-2分区"><a href="#2-2分区" class="headerlink" title="2.2分区"></a>2.2分区</h4><p>如果是装在虚拟机里，可以不分区，直接下一步，随意。<br>如果打算装在实体机里，这一步比较关键，慢慢点。</p>
+<p>选择手动分区，然后按顺序分:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">新建分区   FAT32   /boot/efi   300M        (引导分区，非常重要)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /opt        15G         (软件目录)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /           30G         (根目录)</span><br><span class="line"></span><br><span class="line">新建分区   临时存储空间         8G          (保险分区)</span><br><span class="line"></span><br><span class="line">空闲分区   未知                8G          (硬盘不能用尽，救命分区)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /home       剩余空间    (主目录)</span><br></pre></td></tr></table></figure>
+<p>熟悉之后，可以再根据具体情况进行调整。</p>
+<h4 id="2-3后续操作"><a href="#2-3后续操作" class="headerlink" title="2.3后续操作"></a>2.3后续操作</h4><p>设置用户名，密码。 后面最好不要随便改用户名，因为比较麻烦，也省的出问题。</p>
+<p>下一步，安装。</p>
+<p>完成。重启，把U盘，OK!</p>
+<h2 id="二、配置系统"><a href="#二、配置系统" class="headerlink" title="二、配置系统"></a>二、配置系统</h2><p>Manjaro KDE 安装后，需要一顿配置才能正常使用。</p>
+<h3 id="1-换源"><a href="#1-换源" class="headerlink" title="1.换源"></a>1.换源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman-mirrors -i -c China -m rank</span><br></pre></td></tr></table></figure>
+<p>选一个最快的源，一个就好，选多了会降低速度。</p>
+<h3 id="2-更新软件源"><a href="#2-更新软件源" class="headerlink" title="2.更新软件源"></a>2.更新软件源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Syy</span><br></pre></td></tr></table></figure>
+
+<h3 id="3-添加Archlinuxcn软件源"><a href="#3-添加Archlinuxcn软件源" class="headerlink" title="3.添加Archlinuxcn软件源"></a>3.添加Archlinuxcn软件源</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kate /etc/pacman.conf</span><br></pre></td></tr></table></figure>
+<p>编辑文件，在文件的末尾添加2行内容:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[archlinuxcn]</span><br><span class="line">Server = https://mirrors.aliyun.com/archlinuxcn/<span class="variable">$arch</span></span><br></pre></td></tr></table></figure>
+<p>接着执行以下命令：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -Sy archlinuxcn-keyring haveged</span><br><span class="line">sudo systemctl <span class="built_in">enable</span> haveged</span><br><span class="line">sudo pacman-key --init</span><br><span class="line">sudo pacman-key --populate manjaro</span><br><span class="line">sudo pacman-key --populate archlinux</span><br><span class="line">sudo pacman-key --populate archlinuxcn</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-安装yay"><a href="#4-安装yay" class="headerlink" title="4.安装yay"></a>4.安装yay</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo pacman -S yay</span><br></pre></td></tr></table></figure>
+<h3 id="5-选择Linux内核版本"><a href="#5-选择Linux内核版本" class="headerlink" title="5.选择Linux内核版本"></a>5.选择Linux内核版本</h3><p>选择有“长期支持”和“推荐内容”这2个标签的版本</p>
+<h3 id="6-安装输入法"><a href="#6-安装输入法" class="headerlink" title="6.安装输入法"></a>6.安装输入法</h3><p>以下两种，随便选一种即可：</p>
+<p>云拼音</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S manjaro-asian-input-support-fcitx5 fcitx5 fcitx5-configtool fcitx5-chinese-addons fcitx5-qt fcitx5-gtk</span><br></pre></td></tr></table></figure>
+
+<p>搜狗拼音</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S fcitx fcitx-configtool fcitx-qt5 manjaro-asian-input-support-fcitx fcitx-sogoupinyin</span><br></pre></td></tr></table></figure>
+
+<p>然后自己设置一下。</p>
+<h3 id="7-优化配置"><a href="#7-优化配置" class="headerlink" title="7.优化配置"></a>7.优化配置</h3><p>TRM<br>如果你的manjaro根目录安装在固态硬盘上，那么建议你输入以下命令，TRM会帮助清理SSD中的块，从而延长SSD的使用寿命：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo systemctl <span class="built_in">enable</span> fstrim.timer</span><br></pre></td></tr></table></figure>
+
+<p>避免关机时间过长</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">kate /etc/systemd/system.conf</span><br></pre></td></tr></table></figure>
+
+<p>编辑文件，找到#DefaultTimeoutStartSec和#DefaultTimeoutStopSec，将这2行内容做如下修改:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">DefaultTimeoutStartSec=5s</span><br><span class="line">DefaultTimeoutStopSec=5s</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-安装谷歌浏览器"><a href="#8-安装谷歌浏览器" class="headerlink" title="8.安装谷歌浏览器"></a>8.安装谷歌浏览器</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S google-chrome</span><br></pre></td></tr></table></figure>
+<p>设置为默认浏览器</p>
+<p>浏览器快捷键可以改成: WIN+C</p>
+<h3 id="9-科学上网"><a href="#9-科学上网" class="headerlink" title="9.科学上网"></a>9.科学上网</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S clash clash-for-windows-bin</span><br></pre></td></tr></table></figure>
+
+<h3 id="10-改善字体"><a href="#10-改善字体" class="headerlink" title="10.改善字体"></a>10.改善字体</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S ttf-sarasa-gothic</span><br></pre></td></tr></table></figure>
+<hr>
+<p>更纱黑体 UI SC 11pt<br>等距更纱黑体 SC 11pt<br>更纱黑体 SC 9pt<br>更纱黑体 SC 10pt<br>更纱黑体 SC 10pt<br>更纱黑体 UI SC 10pt</p>
+<hr>
+<p>固定字体 DPI: 110</p>
+<p>具体设置后，可以再自行调整。</p>
+<p>重启，OK!</p>
+<hr>
+
+        </article>
+        <section class="post-near">
+            <ul>
+                
+                    <li>上一篇: 木有了~ </li>
+                
+                
+                    <li>下一篇: <a href="/2023/05/18/USB/">启动U盘</a></li>
+                
+            </ul>
+        </section>
+        
+            <section class="post-tags">
+            <a class="-none-link" href="/tags/%E7%B3%BB%E7%BB%9F/" rel="tag">系统</a>
+            </section>
+        
+    
+        <section class="post-author">
+        
+            <div class="author-info">
+                <h4>Steve-L</h4>
+                <p>个人的一些整理</p>
+            </div>
+        </section>
+    
+    </div>
+</main>
+
+    <footer>
+    <div class="buttons">
+        <a class="to-top" href="#"></a>
+    </div>
+    <div class="wrap min">
+        <section class="widget">
+            <div class="row">
+                <div class="col-m-4">
+                    <h3 class="title-recent">最新文章：</h3>
+                    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2023/05/20/Manjaro/">Linux-Manjaro KDE 版本</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/05/18/USB/">启动U盘</a></li><li class="post-list-item"><a class="post-list-link" href="/2023/05/17/hello-world/">Hello world</a></li></ul>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-date">以往笔记：</h3>
+                    <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/05/">五月 2023</a></li></ul>
+                </div>
+                <div class="col-m-4">
+                    <h3 class="title-tags">标签云：</h3>
+                    <a href="/tags/%E7%B3%BB%E7%BB%9F/" style="font-size: 10px;">系统</a>
+                </div>
+            </div>
+        </section>
+        <section class="sub-footer">
+            <p>© 2023 <a href="/">Steve-L</a>. All Rights Reserved. Theme By <a href="https://github.com/Dreamer-Paul/Hingle" target="_blank" rel="nofollow">Hingle</a>.</p>
+        </section>
+    </div>
+</footer>
+
+
+<script src="/static/kico.js"></script>
+<script src="/static/hingle.js"></script>
+
+
+<script>var hingle = new Paul_Hingle({"copyright":true,"night":true});</script>
+
+  </body>
+</html>
