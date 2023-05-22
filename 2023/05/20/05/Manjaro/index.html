@@ -59,15 +59,15 @@
 <h2 id="一、安装系统"><a href="#一、安装系统" class="headerlink" title="一、安装系统"></a>一、安装系统</h2><h3 id="1-下载系统"><a href="#1-下载系统" class="headerlink" title="1.下载系统"></a>1.下载系统</h3><p>官网: <a target="_blank" rel="noopener" href="https://manjaro.org/">Manjaro</a></p>
 <p>点击 Get Manjaro ，选择PLASMA版本，其实就是KDE版本，下载。</p>
 <h3 id="2-安装系统"><a href="#2-安装系统" class="headerlink" title="2.安装系统"></a>2.安装系统</h3><p>把下载下来的ISO镜像文件，放进U盘启动盘里面，开机启动。如果不熟、担心的，可以先在虚拟机里尝试，上手了再安装。</p>
-<h4 id="2-1操作"><a href="#2-1操作" class="headerlink" title="2.1操作"></a>2.1操作</h4><p>进入到启动界面后，选择lang&#x3D;en_US，把英文改成中文。</p>
+<h4 id="2-1-操作"><a href="#2-1-操作" class="headerlink" title="2.1 操作"></a>2.1 操作</h4><p>进入到启动界面后，选择lang&#x3D;en_US，把英文改成中文。</p>
 <p>然后点击 Boot with open source drivers (开源驱动) 进入安装。</p>
 <p>进入操作界面后，点击Install图标，</p>
 <p>语言:中文。  地域:亚洲，上海。  键盘:默认。  </p>
-<h4 id="2-2分区"><a href="#2-2分区" class="headerlink" title="2.2分区"></a>2.2分区</h4><p>如果是装在虚拟机里，可以不分区，直接下一步，随意。<br>如果打算装在实体机里，这一步比较关键，慢慢点。</p>
+<h4 id="2-2-分区"><a href="#2-2-分区" class="headerlink" title="2.2 分区"></a>2.2 分区</h4><p>如果是装在虚拟机里，可以不分区，直接下一步，随意。<br>如果打算装在实体机里，这一步比较关键，慢慢点。</p>
 <p>选择手动分区，然后按顺序分:</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">新建分区   FAT32   /boot/efi   300M        (引导分区，非常重要)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /opt        15G         (软件目录)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /           30G         (根目录)</span><br><span class="line"></span><br><span class="line">新建分区   临时存储空间         8G          (保险分区)</span><br><span class="line"></span><br><span class="line">空闲分区   未知                8G          (硬盘不能用尽，救命分区)</span><br><span class="line"></span><br><span class="line">新建分区   ext4    /home       剩余空间    (主目录)</span><br></pre></td></tr></table></figure>
 <p>熟悉之后，可以再根据具体情况进行调整。</p>
-<h4 id="2-3后续操作"><a href="#2-3后续操作" class="headerlink" title="2.3后续操作"></a>2.3后续操作</h4><p>设置用户名，密码。 后面最好不要随便改用户名，因为比较麻烦，也省的出问题。</p>
+<h4 id="2-3-后续操作"><a href="#2-3-后续操作" class="headerlink" title="2.3 后续操作"></a>2.3 后续操作</h4><p>设置用户名，密码。 后面最好不要随便改用户名，因为比较麻烦，也省的出问题。</p>
 <p>下一步，安装。</p>
 <p>完成。重启，把U盘，OK!</p>
 <h2 id="二、配置系统"><a href="#二、配置系统" class="headerlink" title="二、配置系统"></a>二、配置系统</h2><p>Manjaro KDE 安装后，需要一顿配置才能正常使用。</p>
@@ -132,6 +132,11 @@
         
     
         <section class="post-author">
+        
+            <figure class="author-avatar">
+                <img src="/static/img/icon.png" alt="Steve-L" />
+        </figure>
+            </figure>
         
             <div class="author-info">
                 <h4>Steve-L</h4>
