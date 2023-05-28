@@ -389,35 +389,58 @@ main img {
 }
 
 /* - 首页大标题 */
-.home-title{
+.home-title {
     text-align: center;
     margin-bottom: 3em;
-    animation: fade-in-bottom .3s both; -webkit-animation: fade-in-bottom .3s both;
+    animation: fade-in-bottom .3s both;
+    -webkit-animation: fade-in-bottom .3s both;
+    position: relative; /* 添加这一行 */
 }
 
-.home-title h1{
+.avatar-wrapper {
+    position: absolute; /* 添加这一行 */
+    left: 540px; /* 自定义头像距离左边的位置 */
+    top: 210px; /* 自定义头像垂直居中位置 */
+    animation: fade-in-bottom .3s both;
+    -webkit-animation: fade-in-bottom .3s both;
+}
+
+.avatar {
+    width: 72px; /* 调整头像的大小 */
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid #888; /* 添加头像的边框样式 */
+}
+
+.title-description {
+    text-align: center;
+}
+
+.home-title h1 {
     color: #6e8aad;
     color: var(--blue);
 }
 
-.home-title span{
+.home-title span {
     display: block;
     margin-bottom: 1em;
     font-style: oblique;
 }
 
 /* - 社交链接 */
-.home-social{
+.home-social {
     cursor: default;
     user-select: none;
- }
+}
 
-.home-social a{
+.home-social a {
     color: inherit;
     display: inline-block;
 }
 
-.home-social i{ padding: .5em }
+.home-social i {
+    padding: .5em;
+}
 
 /* - 文章简要 */
 .post-item{
@@ -593,10 +616,7 @@ article h1:before{ font-weight: bold }
     vertical-align: middle;
 }
 
-.post-author img{ 
-    border-radius: 66%;
-    border: 1px solid #ddd;
-     }
+.post-author img{ border-radius: 66% }
 
 .post-author .author-info{ margin-left: 1.5em }
 
