@@ -420,7 +420,7 @@ main img {
 
 .head-logo {
     position: absolute;
-    top: 112px; /* 自定义头像的垂直位置 */
+    top: 102px; /* 自定义头像的垂直位置 */
     left:12px; /* 自定义头像的水平位置 */
     display: inline-block;
     border-radius: 50%;
