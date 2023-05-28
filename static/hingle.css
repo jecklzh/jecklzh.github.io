@@ -413,19 +413,26 @@ main img {
 }
 
 /* - 增加我的LOGO */
+
+.wrap.min {
+    position: relative;
+}
+
 .head-logo {
+    position: absolute;
+    top: 112px; /* 自定义头像的垂直位置 */
+    left:12px; /* 自定义头像的水平位置 */
     display: inline-block;
     border-radius: 50%;
     overflow: hidden;
-    margin-right: 0px; /* 自定义头像与标题的间距 */
     border: 2px solid #888; /* 添加边框样式 */
-    padding: 0px; /* 可选：添加内边距以控制边框与头像之间的距离 */
-    animation: fade-in-top .3s .7s both; -webkit-animation: fade-in-top .3s .7s both;
+    animation: fade-in-top .3s both;
+    -webkit-animation: fade-in-top .3s both;
 }
 
 .head-logo .avatar {
-    width: 72px; /* 自定义头像的大小 */
-    height: 72px;
+    width: 69px; /* 自定义头像的大小 */
+    height: 69px;
 }
 
 /* - 社交链接 */
