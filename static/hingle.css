@@ -397,21 +397,6 @@ main img {
     position: relative; /* 添加这一行 */
 }
 
-.avatar-wrapper {
-    position: absolute; /* 添加这一行 */
-    left: 540px; /* 自定义头像距离左边的位置 */
-    top: 210px; /* 自定义头像垂直居中位置 */
-    animation: fade-in-bottom .3s both;
-    -webkit-animation: fade-in-bottom .3s both;
-}
-
-.avatar {
-    width: 72px; /* 调整头像的大小 */
-    height: 72px;
-    border-radius: 50%;
-    border: 2px solid #888; /* 添加头像的边框样式 */
-}
-
 .title-description {
     text-align: center;
 }
@@ -425,6 +410,22 @@ main img {
     display: block;
     margin-bottom: 1em;
     font-style: oblique;
+}
+
+/* - 增加我的LOGO */
+.head-logo {
+    display: inline-block;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 0px; /* 自定义头像与标题的间距 */
+    border: 2px solid #888; /* 添加边框样式 */
+    padding: 0px; /* 可选：添加内边距以控制边框与头像之间的距离 */
+    animation: fade-in-top .3s .7s both; -webkit-animation: fade-in-top .3s .7s both;
+}
+
+.head-logo .avatar {
+    width: 72px; /* 自定义头像的大小 */
+    height: 72px;
 }
 
 /* - 社交链接 */
