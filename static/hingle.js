@@ -171,7 +171,7 @@ var Paul_Hingle = function (config) {
         form.onsubmit = function (ev) {
             ev.preventDefault();
 
-            window.open("https://www.google.com/search?q=site:" + location.host + " " + input.value.trim());
+            window.open("https://www.google.com/search?q=" + input.value.trim());
         }        
     }
 
