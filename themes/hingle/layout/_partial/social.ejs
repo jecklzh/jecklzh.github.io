@@ -1,0 +1,16 @@
+<% if (theme.social) { %>
+    <div class="home-social">
+    <% theme.social.forEach(item => { %>
+        <a href="<%= item.link %>" title="<%= item.title %>">
+            <% if (item.stacked) { %>
+                <span class="fa-stack fa-lg">
+                    <i class="fa fa-<%= item.icon %> fa-stack-1x "></i>
+                    <i class="fa fa-<%= item.icon2 %> fa-stack-1x "></i>
+                </span>
+            <% } else { %>
+                <i class="fa fa-<%= item.icon %>"></i>
+            <% } %>
+        </a>
+    <% }) %>
+    </div>
+<% } %>

@@ -1,0 +1,26 @@
+<main>
+    <div class="wrap min">
+        <section class="home-title">
+            <h1><%= config.title %></h1>
+            <span><%= config.description %></span>
+            <%- partial("_partial/social") %>
+        </section>
+        <div class="head-logo">
+            <img src="<%= theme.author_avatar.local_path %>" alt="<%= config.title %>" class="avatar" />
+        </div>
+        <script>
+        document.addEventListener('contextmenu', function (event) {
+           event.preventDefault();
+           return false;
+          });
+        </script>
+
+        <%- partial("_partial/archive-list") %>
+        <section class="page-navigator">
+            <%- paginator({
+                prev_text: "«",
+                next_text: "»"
+            }) %>
+        </section>
+    </div>
+</main>
