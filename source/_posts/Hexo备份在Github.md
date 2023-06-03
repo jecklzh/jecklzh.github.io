@@ -61,23 +61,25 @@ hexo d
 四、恢复博客
 ---
 换个地方更新博客
-1. 安装git
-2. 设置git全局邮箱和用户名
-3. 安装node.js
-4. 安装hexo
+
+1.安装git
+2.设置git全局邮箱和用户名
+3.安装node.js
+4.安装hexo
 ```bash
 npm install hexo-cli -g
 ```
-5. 克隆博客
+5.克隆博客
 ```bash
 git clone ...
 ```
-6. 安装npm
+6.安装npm
 ```bash
 cd xxx.github.io
 npm install
 npm install hexo-deployer-git --save
 ```
+
 ---
 然后就可以开始正常编辑部署了。
 
