@@ -11,19 +11,45 @@ tags:
 
 一、下载这个玩意
 ---
-直接点击吧: [ventoy](https://www.ventoy.net/cn/download.html)
+直接点击: [Ventoy](https://www.ventoy.net/cn/download.html)
 
-打开Ventory2Disk.exe，选择U盘 安装。格式化，选择NTFS，4096(4K对齐)，搞定。
+打开Ventory2Disk.exe，选择U盘 安装。格式化，选择NTFS，4096(4K对齐)
+完成
 
 二、保底工具，下载PE
 ---
-自己来选吧: [微PE工具箱](https://www.wepe.com.cn/download.html)
+自己选一个: [微PE工具箱](https://www.wepe.com.cn/download.html)
 
-把下载下来的ISO 丢进U盘，搞定。
+把下载下来的ISO 放进U盘
 
-最后，自选ISO系统
+完成
+
+(PE工具不是必须的，直接放置系统的ISO文件可以直接识别安装)
+
+三、Win11 系统
 ---
-例如:Win10，Win11，还是Linux，看自己了，一并放到U盘里，喜欢哪个装哪个。
+时代在变化，Win10在不久后就会退役了，因此也不推荐了。
 
-That's all, thank you!
+安装Win11系统推荐去微软的官网去创建: [Microsoft](https://www.microsoft.com/zh-cn/software-download/windows11)
+
+这里微软提供创建介质的三个选项：
+第一种: 是在当前系统上操作的，例如win10升级win11，等其他情况。
+第三种忽略。
+
+一般选择第二种: 创建 Windows 11 安装
+这种是创建ISO文件，适合USB安装，也是大多数人的安装方法。
+
+点击立即下载
+
+下载后打开，按照提示点击下一步
+
+里面有一项是选择按照当前系统创建，还是创建新的系统，这一部自己决定，
+命名，然后生成一个ISO文件
+
+最后，放进U盘
+
+完成
+
+
 ---
+(更新于2023-12-10)
