@@ -28,4 +28,12 @@ sudo pacman -Rdd kpeoplevcard
 升级可以用命令，也可以用鼠标点，可以都试下。反正稀里糊涂就升过去了，大致思路是这样。
 
 ---
+当出现类似如下显示时，可能是因为镜像的服务器有问题。
+```
+archlinuxcn.db下载失败
+错误：无法从 XXX 'mirrors.XXX.com' 获取文件 'archlinuxcn.db'
+```
+尝试下更换源，参照设置系统时的步骤，同时参照下[镜像排名](https://archlinux.org/mirrors/status/)
 
+---
+(更新于2024-2-05)
