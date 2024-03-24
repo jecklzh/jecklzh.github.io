@@ -6,20 +6,19 @@ author_avatar:  # 作者头像
 
 author_text: '个人的一些整理' # 作者信息
 social: # 社交链接
-  - title: 'ChatGPT'
-    icon: 'commenting-o'
-    icon2: 'star-o'
-    link: 'https://chat.openai.com'
-    stacked: false
-  - title: '谷歌翻译'
-    icon: 'exchange'
-    icon2: 'question'
-    link: 'https://translate.google.com/'
-    stacked: false
   - title: 'Github'
     icon: 'github'
     link: 'https://github.com/'
     stacked: false
+  - title: 'ChatGPT'
+    icon: 'commenting-o'
+    link: 'https://chat.openai.com'
+    stacked: false
+  - title: '谷歌翻译'
+    icon: 'exchange'
+    link: 'https://translate.google.com/'
+    stacked: false
+
 # background: 'https://api.paugram.com/wallpaper?source=gh' # 主题背景
 menu: # 页眉菜单项目
   #'关于我': /about
